@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Odontología Integral Avellaneda · Guardia odontológica todos los días</title>
+<meta name="description" content="Guardia odontológica en Avellaneda, abierta todos los días y feriados. Implantes, prótesis, blanqueamiento y diseño de sonrisa. Av. Mitre 1027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Idea: lo primero que importa en una guardia es si está abierta ahora. Eso es la portada. */
+:root{
+  --fondo:#F6F8F7;
+  --blanco:#FFFFFF;
+  --petroleo:#0D5960;
+  --petroleo-osc:#09444A;
+  --menta:#DCEFEC;
+  --madera:#8A5A3B;
+  --texto:#18282A;
+  --gris:#5A6B6D;
+  --linea:#D5E0DE;
+  --h:"Red Hat Display",system-ui,sans-serif;
+  --f:"Red Hat Text",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--fondo);color:var(--texto);font:400 1.0625rem/1.6 var(--f);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select{font:inherit}
+:focus-visible{outline:3px solid var(--madera);outline-offset:2px}
+.wrap{width:min(1080px,100% - 36px);margin-inline:auto}
+h1,h2,h3{font-family:var(--h);line-height:1.08;margin:0}
+h2{font-size:clamp(1.9rem,4.4vw,2.7rem);font-weight:800;letter-spacing:-.015em;color:var(--petroleo-osc)}
+.intro{margin:10px 0 30px;color:var(--gris);max-width:58ch}
+section{padding:68px 0}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;border:2px solid var(--petroleo);background:var(--petroleo);color:#fff;font-weight:600;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--petroleo-osc);border-color:var(--petroleo-osc)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-claro{background:transparent;color:var(--petroleo)}
+.btn-claro:hover{background:var(--menta);border-color:var(--petroleo)}
+
+/* barra */
+.barra{background:var(--blanco);border-bottom:1px solid var(--linea)}
+.barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:66px}
+.marca{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:800;font-size:1.05rem;text-decoration:none;color:var(--petroleo-osc)}
+.marca b{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:var(--petroleo);color:#fff;font-size:.95rem;letter-spacing:.02em}
+.barra a.tel{font-weight:600;text-decoration:none;color:var(--petroleo)}
+
+/* portada: el estado de la guardia */
+.portada{padding:44px 0 56px;background:var(--blanco)}
+.portada .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media(max-width:860px){.portada .wrap{grid-template-columns:1fr;gap:30px}}
+.ahora{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 12px;border-radius:999px;background:var(--menta);color:var(--petroleo-osc);font-weight:600}
+.ahora i{width:11px;height:11px;border-radius:50%;background:#1E9E62;box-shadow:0 0 0 0 rgba(30,158,98,.5);animation:pulso 2s infinite}
+.ahora.cerrado{background:#F3E9E2;color:var(--madera)}
+.ahora.cerrado i{background:var(--madera);animation:none}
+@keyframes pulso{70%{box-shadow:0 0 0 9px rgba(30,158,98,0)}100%{box-shadow:0 0 0 0 rgba(30,158,98,0)}}
+.portada h1{margin:20px 0 0;font-size:clamp(2.5rem,6.4vw,4.3rem);font-weight:800;letter-spacing:-.025em;color:var(--petroleo-osc)}
+.portada p.bajada{margin:18px 0 0;font-size:1.15rem;color:var(--gris);max-width:44ch}
+.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.datos{display:flex;flex-wrap:wrap;gap:8px 22px;margin:26px 0 0;padding:0;list-style:none;color:var(--gris);font-size:.98rem}
+.datos b{color:var(--texto);font-weight:600}
+.foto-portada{position:relative}
+.foto-portada img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px}
+@media(max-width:860px){.foto-portada img{aspect-ratio:4/3}}
+.foto-portada figcaption{position:absolute;left:14px;bottom:14px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.92);font-size:.9rem;font-weight:500}
+
+/* tratamientos */
+.trat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:18px;overflow:hidden}
+@media(max-width:860px){.trat{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.trat{grid-template-columns:1fr}}
+.trat article{background:var(--blanco);padding:24px 22px}
+.trat h3{font-size:1.22rem;font-weight:700;color:var(--petroleo-osc)}
+.trat p{margin:8px 0 0;color:var(--gris);font-size:.98rem}
+.trat article.guardia{background:var(--petroleo);color:#fff}
+.trat article.guardia h3{color:#fff}
+.trat article.guardia p{color:#CFE7E4}
+
+/* primera consulta: sí es una secuencia */
+.primera{background:var(--blanco)}
+.pasos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin:0;padding:0;list-style:none;counter-reset:p}
+@media(max-width:860px){.pasos{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pasos{grid-template-columns:1fr}}
+.pasos li{counter-increment:p;padding-top:16px;border-top:3px solid var(--petroleo)}
+.pasos li::before{content:counter(p);display:block;font-family:var(--h);font-weight:800;font-size:1.6rem;color:var(--madera)}
+.pasos h3{margin-top:6px;font-size:1.12rem}
+.pasos p{margin:6px 0 0;color:var(--gris);font-size:.97rem}
+
+/* la casa */
+.casa .grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:12px;height:520px}
+.casa .grid img{width:100%;height:100%;object-fit:cover;border-radius:16px;min-height:0}
+.casa .grid img:first-child{grid-row:1 / span 2}
+@media(max-width:760px){.casa .grid{grid-template-columns:1fr 1fr;grid-template-rows:none;height:auto}.casa .grid img{aspect-ratio:1}.casa .grid img:first-child{grid-column:1 / span 2;grid-row:auto;aspect-ratio:4/3}}
+
+/* reseñas */
+.res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media(max-width:860px){.res{grid-template-columns:1fr}}
+.res figure{margin:0;padding:24px;background:var(--blanco);border:1px solid var(--linea);border-radius:16px}
+.res blockquote{margin:0;font-size:1.05rem}
+.res figcaption{margin-top:14px;color:var(--gris);font-size:.92rem}
+
+/* turno */
+.turno{background:var(--petroleo-osc);color:#fff}
+.turno h2{color:#fff}
+.turno .intro{color:#C6DEDB}
+.turno .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+@media(max-width:860px){.turno .wrap{grid-template-columns:1fr;gap:10px}}
+form{display:grid;gap:14px;background:var(--blanco);color:var(--texto);padding:24px;border-radius:18px}
+label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+input,select{min-height:50px;padding:0 14px;border:2px solid var(--linea);border-radius:10px;background:#fff;color:var(--texto)}
+input:focus,select:focus{outline:none;border-color:var(--petroleo)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:block}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:9px 14px;border:2px solid var(--linea);border-radius:999px;font-weight:500;cursor:pointer}
+.chips input:checked+span{background:var(--petroleo);border-color:var(--petroleo);color:#fff}
+.chips input:focus-visible+span{outline:3px solid var(--madera);outline-offset:2px}
+.urgente{margin:0;color:var(--gris);font-size:.92rem}
+
+/* dónde */
+.donde .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:860px){.donde .wrap{grid-template-columns:1fr;gap:26px}}
+table{width:100%;border-collapse:collapse}
+th,td{padding:11px 0;border-bottom:1px solid var(--linea);text-align:left}
+th{font-weight:500}
+tr.hoy th,tr.hoy td{color:var(--petroleo);font-weight:700}
+footer{padding:28px 0 34px;border-top:1px solid var(--linea);color:var(--gris);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="wrap">
+    <a class="marca" href="#"><b>OIA</b> Odontología Integral Avellaneda</a>
+    <a class="tel" href="tel:+541142017195">4201-7195</a>
+  </div>
+</header>
+
+<section class="portada">
+  <div class="wrap">
+    <div>
+      <span class="ahora" id="ahora"><i></i><span id="ahora-txt">Guardia odontológica</span></span>
+      <h1>Si te duele hoy, te atendemos hoy.</h1>
+      <p class="bajada">Guardia odontológica en Avellaneda, abierta todos los días, también feriados. Y para lo que no es urgente: implantes, prótesis y blanqueamiento.</p>
+      <div class="acciones">
+        <a class="btn" href="#turno"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.9 3 3.1 8.78 3.1 15.9c0 2.28.6 4.5 1.73 6.45L3 29l6.83-1.79a12.9 12.9 0 0 0 6.2 1.58h.01c7.13 0 12.93-5.79 12.93-12.9S23.17 3 16.04 3Zm0 23.6h-.01a10.7 10.7 0 0 1-5.46-1.5l-.39-.23-4.05 1.06 1.08-3.95-.26-.4a10.66 10.66 0 0 1-1.64-5.68c0-5.9 4.82-10.71 10.74-10.71 5.92 0 10.73 4.8 10.73 10.71 0 5.9-4.82 10.7-10.74 10.7Zm5.89-8.02c-.32-.16-1.91-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.68 0 1.58 1.15 3.1 1.31 3.32.16.21 2.26 3.44 5.47 4.83.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg>Pedir turno</a>
+        <a class="btn btn-claro" href="tel:+541142017195">Llamar a la guardia</a>
+      </div>
+      <ul class="datos">
+        <li><b>Lunes a sábado</b> 9 a 20 h</li>
+        <li><b>Domingos</b> 9 a 19 h</li>
+        <li><b>Av. Mitre 1027</b>, Avellaneda</li>
+      </ul>
+    </div>
+    <figure class="foto-portada" style="margin:0">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RTELEXJwJ9Vp--xWIqlJ9mplX5K4C9CjKNolfSVh8BtJFMA-ybdqmbh8dYn-ChdKgHMUjFQCWKxEwSe9COyn-xH8kwOqk1LpqZXNWQ2gz3ssaYT4Hw7dqlzdryA4y76ihzR9cTz2n5QUQ=w900-h1100-k-no" alt="Consultorio de Odontología Integral Avellaneda">
+      <figcaption>Nuestro consultorio en Av. Mitre 1027</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="tratamientos">
+  <div class="wrap">
+    <h2>Qué hacemos</h2>
+    <p class="intro">Desde una urgencia hasta rehacer la sonrisa completa, en el mismo lugar y con el mismo equipo.</p>
+    <div class="trat">
+      <article class="guardia"><h3>Guardia y urgencias</h3><p>Dolor, un diente roto o una infección. Vení sin turno, todos los días.</p></article>
+      <article><h3>Implantes</h3><p>Reemplazamos piezas que faltan con implantes fijos.</p></article>
+      <article><h3>Prótesis</h3><p>Fijas y removibles, hechas a medida para que comas y hables tranquilo.</p></article>
+      <article><h3>Blanqueamiento</h3><p>Dientes más blancos, con un tratamiento cuidado y controlado.</p></article>
+      <article><h3>Diseño de sonrisa</h3><p>Planificamos con vos cómo querés que se vea tu sonrisa.</p></article>
+      <article><h3>Rehabilitación oral</h3><p>Recuperamos la función y la estética cuando hay varias piezas para tratar.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="primera">
+  <div class="wrap">
+    <h2>Si hace mucho que no venís</h2>
+    <p class="intro">Volver al dentista después de años da miedo, y está bien. Así es tu primera consulta, para que vengas tranquilo.</p>
+    <ol class="pasos">
+      <li><h3>Te recibimos</h3><p>Llegás, te anotamos y esperás en una sala cómoda.</p></li>
+      <li><h3>Charlamos</h3><p>Nos contás qué te pasa y qué te preocupa, sin apuro.</p></li>
+      <li><h3>Revisamos</h3><p>Hacemos una revisión completa y te mostramos lo que vemos.</p></li>
+      <li><h3>Armamos el plan</h3><p>Te explicamos las opciones y el presupuesto antes de empezar.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="casa">
+  <div class="wrap">
+    <h2>Una casona en Av. Mitre</h2>
+    <p class="intro">Nos mudamos a un espacio nuevo, con consultorios equipados y una sala de espera tranquila.</p>
+    <div class="grid">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Ts_XnJwAPMaAqQfTNAwMTkGLTVOC_n7d2RoQI_1xyryDCBoOm0QTqRSJhEBrT3gi-JZtABSi2-xYn3OYmMc6ARfzcpDD54RX70BZMcbOebeNbDrC-Ou2OEzRhEAwy-GN_dT83zCKgN0J93=w800-h900-k-no" alt="Sala de espera con pared de ladrillo" loading="lazy">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qke0uFjRblv1okzNi1X2aQl2-zGJ1t5gyFp71hMETmiKzuqfwwXOFzeIFjwDrHuU9sXt4FkRcvTYhnXw8gZ-9iPGk142RTQdin8eQFsMcS-RKsciruZT4eF1RgCLCJmSoDAhLsKB6QK86Z=w500-h500-k-no" alt="Sillón odontológico" loading="lazy">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QaU9TqwtTwJe6ijIhYZQPkKnJzO_x5blYowgm7yE6WEpx43lQZE4Kapyfzb06nywVfTz0Tyk8nRxZ9dZEd9bEn6Y9oOxF8FyrjInK18HtAio88ijePAcUArm6-kSF7zpN4vZwcNM1XoSw=w500-h500-k-no" alt="Consultorio" loading="lazy">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qn3W1TRn9yc068P8QH1Ba5nO9Bbw_VCETbLnsfBPGe0g2CIbuSUTl8AQ518VHmV2FeO489dt7xBxJ4dvX7FJkUR42IR7Dse4PDGJqiap571lZo2dMXX0RT4S_50Yxs0kWOpaxCKQ=w500-h500-k-no" alt="Otro consultorio" loading="lazy">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RTELEXJwJ9Vp--xWIqlJ9mplX5K4C9CjKNolfSVh8BtJFMA-ybdqmbh8dYn-ChdKgHMUjFQCWKxEwSe9COyn-xH8kwOqk1LpqZXNWQ2gz3ssaYT4Hw7dqlzdryA4y76ihzR9cTz2n5QUQ=w500-h500-k-no" alt="Consultorio principal" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Lo que cuentan los pacientes</h2>
+    <p class="intro">Reseñas de Google.</p>
+    <div class="res">
+      <figure><blockquote>“Tenía mucho miedo de ir a un odontólogo. Hablo en pasado, porque poco a poco se fue yendo y todo fue gracias a Adrián.”</blockquote><figcaption>Marilyn G.</figcaption></figure>
+      <figure><blockquote>“Excelente experiencia. Desde que entré, me sentí muy cómoda y bien atendida. El lugar es impecable y transmite mucha confianza.”</blockquote><figcaption>Julieta S.</figcaption></figure>
+      <figure><blockquote>“Fui hoy lunes feriado, me atendió el Dr. Adrián, muy amable, con paciencia, y quedé muy conforme con el arreglo.”</blockquote><figcaption>Noelia E.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="turno" id="turno">
+  <div class="wrap">
+    <div>
+      <h2>Pedí tu turno</h2>
+      <p class="intro">Completá esto y te llega el mensaje armado por WhatsApp. Te contestamos con el día y la hora.</p>
+      <p class="intro" style="margin-top:0">Si es una urgencia, no esperes: vení directo o llamá al <a href="tel:+541142017195" style="color:#fff">4201-7195</a>.</p>
+    </div>
+    <form id="form-turno">
+      <fieldset style="border:0;padding:0;margin:0">
+        <legend style="font-weight:600;font-size:.95rem;margin-bottom:8px">¿Para qué es?</legend>
+        <div class="chips">
+          <label><input type="radio" name="motivo" value="una consulta y revisión" checked><span>Consulta</span></label>
+          <label><input type="radio" name="motivo" value="un dolor o urgencia"><span>Dolor</span></label>
+          <label><input type="radio" name="motivo" value="implantes"><span>Implantes</span></label>
+          <label><input type="radio" name="motivo" value="prótesis"><span>Prótesis</span></label>
+          <label><input type="radio" name="motivo" value="blanqueamiento"><span>Blanqueamiento</span></label>
+        </div>
+      </fieldset>
+      <label>Tu nombre<input id="nombre" autocomplete="given-name" placeholder="Ej.: Laura"></label>
+      <label>¿Cuándo te queda mejor?
+        <select id="cuando">
+          <option>a la mañana</option>
+          <option>a la tarde</option>
+          <option>el sábado</option>
+          <option>el domingo</option>
+          <option>lo antes posible</option>
+        </select>
+      </label>
+      <button class="btn" type="submit"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.9 3 3.1 8.78 3.1 15.9c0 2.28.6 4.5 1.73 6.45L3 29l6.83-1.79a12.9 12.9 0 0 0 6.2 1.58h.01c7.13 0 12.93-5.79 12.93-12.9S23.17 3 16.04 3Zm0 23.6h-.01a10.7 10.7 0 0 1-5.46-1.5l-.39-.23-4.05 1.06 1.08-3.95-.26-.4a10.66 10.66 0 0 1-1.64-5.68c0-5.9 4.82-10.71 10.74-10.71 5.92 0 10.73 4.8 10.73 10.71 0 5.9-4.82 10.7-10.74 10.7Zm5.89-8.02c-.32-.16-1.91-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.68 0 1.58 1.15 3.1 1.31 3.32.16.21 2.26 3.44 5.47 4.83.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg>Mandar por WhatsApp</button>
+      <p class="urgente">Muestra: el botón se conecta al WhatsApp de turnos del consultorio.</p>
+    </form>
+  </div>
+</section>
+
+<section class="donde">
+  <div class="wrap">
+    <div>
+      <h2>Dónde estamos</h2>
+      <p class="intro">Av. Bartolomé Mitre 1027, Avellaneda.</p>
+      <p><a class="btn btn-claro" href="https://www.google.com/maps/search/?api=1&query=Odontolog%C3%ADa+Integral+Avellaneda+Mitre+1027" target="_blank" rel="noopener">Cómo llegar</a></p>
+    </div>
+    <div>
+      <table aria-label="Horarios"><tbody id="horarios"></tbody></table>
+      <p style="color:var(--gris);font-size:.95rem;margin-top:12px">Feriados también estamos abiertos.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Odontología Integral Avellaneda</span>
+    <span>Muestra hecha por <a href="https://pazstudio.com.ar">Paz Studio</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var dias=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  var hs=[[9,19],[9,20],[9,20],[9,20],[9,20],[9,20],[9,20]];
+  var orden=[1,2,3,4,5,6,0], ahora=new Date(), hoy=ahora.getDay(), tb=document.getElementById('horarios');
+  orden.forEach(function(d){var tr=document.createElement('tr');if(d===hoy)tr.className='hoy';tr.innerHTML='<th>'+dias[d]+'</th><td>'+hs[d][0]+' a '+hs[d][1]+' h</td>';tb.appendChild(tr)});
+  var h=ahora.getHours()+ahora.getMinutes()/60, abierto=h>=hs[hoy][0]&&h<hs[hoy][1];
+  var el=document.getElementById('ahora'), t=document.getElementById('ahora-txt');
+  if(abierto){t.textContent='Guardia abierta ahora, hasta las '+hs[hoy][1]+' h'}
+  else{el.classList.add('cerrado');var m=h<hs[hoy][0]?'hoy':'mañana',d=h<hs[hoy][0]?hoy:(hoy+1)%7;t.textContent='Abrimos '+m+' a las '+hs[d][0]+' h'}
+  document.getElementById('form-turno').addEventListener('submit',function(e){
+    e.preventDefault();
+    var motivo=document.querySelector('input[name=motivo]:checked').value,n=document.getElementById('nombre').value.trim(),c=document.getElementById('cuando').value;
+    var msg='Hola! '+(n?'Soy '+n+'. ':'')+'Quiero pedir un turno para '+motivo+', '+c+'. ¿Qué disponibilidad tienen?';
+    window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
+  });
+})();
+</script>
+</body>
+</html>
